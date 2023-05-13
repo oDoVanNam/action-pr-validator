@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "node": true,
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "linebreak-style": "off",
+    "semi": "error",
+    "no-multiple-empty-lines": ["warn", { "max": 1 }],
+    "function-paren-newline": "off",
+    "implicit-arrow-linebreak": "off",
+    "eslint-disable consistent-return": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "no-shadow": "off",
+    "no-use-before-define": "off",
+    "prefer-destructuring": ["error", { "object": true, "array": false }],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+  }
+}

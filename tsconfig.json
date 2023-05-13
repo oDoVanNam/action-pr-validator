@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "commonjs",
+    "target": "es2020",
+    "lib": ["es2020"],
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "declaration": false,
+    "outDir": "build",
+    "baseUrl": ".",
+  },
+  "include": ["src/**/*"]
+}

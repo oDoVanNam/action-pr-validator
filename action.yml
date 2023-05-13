@@ -1,0 +1,19 @@
+name: 'Pull Request Checker'
+description: 'Github action to enforce PR conventions'
+author: 'oDoVanNam'
+inputs:
+  title_regex:
+    description: 'Enforce PR title to match pattern'
+    required: false
+    default: '.+'
+  allowed_prefixes:
+    description: 'CSV of prefixes allowed to be used in title. eg: feature,hotfix,bugfix,JIRA-'
+    required: true
+    default: 'Feature,Hotfix,Bugfix,Revamp'
+  branch_regex:
+    description: 'Enforce branch name to match pattern'
+    required: false
+    default: '.+'
+runs:
+  using: 'node16'
+  main: 'build/index.js'

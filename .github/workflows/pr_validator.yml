@@ -1,0 +1,14 @@
+name: 'PR validator'
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
+        with:
+          allowed_prefixes: 'Feature,Hotfix,Bugfix,Revamp'
+          title_regex: '#[0-9]+:? .+'
